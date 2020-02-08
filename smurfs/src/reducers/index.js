@@ -19,7 +19,7 @@ export const smurfReducer = (state = initialState, action) => {
         case SHOWING_SMURF:
             return {
                 ...state,
-                smurfs: action.smurfs,
+                smurfs: action.smurfs.data,
                 aquiringSmurf: false
             };
         case ERROR_SMURF:
