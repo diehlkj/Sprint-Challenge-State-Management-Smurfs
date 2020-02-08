@@ -22,17 +22,3 @@ export const getSmurf = () => dispatch => {
             });
     }, 1000);
 };
-
-// export const postSmurf = () => dispatch => {
-//     console.log('POSTING SMURF TRIGGERED');
-//     dispatch({ type: POST_SMURF});
-//     axios
-//         .get('http://localhost:3333/smurfs', dispatch)
-//         .then(res => {
-//             console.log('SMURFS THAT HAVE BEEN SENT::::::::::: ', res);
-//         })
-//         .catch(err => {
-//             console.log('AAAAAHHHHHHHH ', err);
-//             dispatch({type: ERROR_SMURF, error: "We've run into a problem getting the smurfs... Your name doesn't happen to be Gargamel, does it?"})
-//         });
-// };

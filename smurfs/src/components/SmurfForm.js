@@ -14,6 +14,7 @@ function SmurfForm(props) {
             .post('http://localhost:3333/smurfs', values)
             .then(res => {
                 console.log('SMURFS THAT HAVE BEEN SENT::::::::::: ', res);
+                clearForm();
                 props.getSmurf();
             })
             .catch(err => {
@@ -31,12 +32,11 @@ function SmurfForm(props) {
     );
     
     return (
-        <form onSubmit={handleSubmit}>
+        <form className="smurf-form" onSubmit={handleSubmit}>
             <input type='text' placeholder='Name' name='name' value={values.name} onChange={handleChanges}/>
             <input type='number' placeholder='Age' name='age' value={values.age} onChange={handleChanges}/>
             <input type='number' placeholder='Height' name='height' value={values.height} onChange={handleChanges}/>
             <button type="submit">Add Smurf!</button>
-            <button onClick={clearForm}>Reset Form</button>
         </form>
     );
 }

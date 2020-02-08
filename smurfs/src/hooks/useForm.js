@@ -14,8 +14,7 @@ export const useForm = (initialValues = {}, submitCallback) => {
       submitCallback();
     };
   
-    const clearForm = e => {
-      e.preventDefault();
+    const clearForm = () => {
       setValues(initialValues);
     };
   

@@ -18,12 +18,15 @@ const App = props => {
         <form>
           <button>Get Smurfs!</button>
         </form>
-        {props.smurfs.map(smurf => {
-          return (
-            <SmurfCard className="smurf-card" smurf={smurf}/>
-          );
-        })}
+        
         <SmurfForm/>
+        <div className="card-container">
+          {props.smurfs.map(smurf => {
+            return (
+              <SmurfCard smurf={smurf}/>
+            );
+          })}
+        </div>
       </div>
     );
 }
